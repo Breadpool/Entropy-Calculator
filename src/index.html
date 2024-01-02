@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Entropy Calculator</title>
+  </head>
+  <body>
+    <h1>Welcome to the Entropy Calculator Application!</h1>
+    <textarea id="inputArea" placeholder="Enter text here..."></textarea>
+    <link rel="stylesheet" href="index.css">
+    <button onclick="calculateEntropy()">Calculate Entropy</button>
+    <div>
+      <input type="file" id="fileInput" style="display: none;" onchange="handleFileSelect()" accept=".txt"/>
+      <button onclick="document.getElementById('fileInput').click()">Open File</button>
+    </div>
+    <h4>Only .txt files!</h4>
+    <h5>You can change the file contents as you please <br> before clicking the button "Calculate Entropy."</h5>
+    <div id="entropyDisplay">ENTROPY :  <span id="resultValue"></span></div>
+
+    <button onclick="showCharacterLog()">Show Log</button>
+
+    <textarea id="characterLog" placeholder="Character Appearance Rate..." readonly></textarea>
+
+
+  
+    <script src="main.js"></script>
+  </body>
+  </html>

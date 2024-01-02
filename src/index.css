@@ -1,0 +1,106 @@
+body {
+  background-color: #0F8B8D;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #143642;
+  text-align: center;
+  margin-bottom: 20px;
+}
+h5{
+  color:#143642;
+}
+
+textarea {
+  background-color: #DAD2D8;
+  color: rgb(3, 32, 32);
+  width: 80%;
+  height: 200px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+
+button {
+  background-color: #5e0c00;
+  color: #e29090;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #8d1600; 
+  color: #ffffff; 
+}
+
+#result {
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#entropyDisplay {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #74c6a5;
+  color: #043232;
+  width: 80%;
+  border: 1px solid #1d1307;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+
+
+
+#characterLog::-webkit-scrollbar {
+ width: 12px;
+ 
+  scrollbar-width: thin;
+  scrollbar-color: #e6cba8;
+}
+
+#characterLog::-webkit-scrollbar-thumb {
+ background-color: #5e0c00; 
+ border-radius: 5px;
+}
+
+#characterLog::-webkit-scrollbar-track {
+ background-color: #beb8bd;
+}
+
+
+#characterLog {
+ resize: both;
+}
+
+
+#characterLog::after {
+ content: "";
+ display: block;
+ position: absolute;
+ bottom: 0;
+ right: 0;
+
+ background-color: #5e0c00; 
+ cursor: se-resize;
+}
