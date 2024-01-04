@@ -57,12 +57,8 @@ function calculateEntropy() {
 
   
   const averageInformation = calculateAverageInformation(inputText).toFixed(3);
-
- 
-  const relativeEntropy = calculateRelativeEntropy(inputText).toFixed(3);
-
   
-  document.getElementById('resultValue').textContent = `Average Information: ${averageInformation} |||\nRelative Entropy (Kullback-Leibler): ${relativeEntropy}`;
+  document.getElementById('resultValue').textContent = `Average Information: ${averageInformation}`;
 }
 
 function calculateAverageInformation(text) {
@@ -79,24 +75,6 @@ function calculateAverageInformation(text) {
   return averageInformation;
 }
 
-function calculateRelativeEntropy(text) {
-  
-  const referenceDistribution = getUniformDistribution();
-
-  const charCounts = getCharacterCounts(text);
-  const totalCharacters = text.length;
-
-  let relativeEntropy = 0;
-
-  for (const char in charCounts) {
-    const probabilityX = charCounts[char] / totalCharacters;
-    const probabilityQ = referenceDistribution[char];
-
-    relativeEntropy += probabilityX * Math.log2(probabilityX / probabilityQ);
-  }
-
-  return relativeEntropy;
-}
 
 function getCharacterCounts(text) {
   const charCounts = {};
