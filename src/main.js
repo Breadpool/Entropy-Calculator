@@ -90,19 +90,6 @@ function getCharacterCounts(text) {
   return charCounts;
 }
 
-function getUniformDistribution() {
-
-  const totalCharacters = 128; 
-  const uniformDistribution = {};
-
-  for (let i = 0; i < totalCharacters; i++) {
-    const char = String.fromCharCode(i);
-    uniformDistribution[char] = 1 / totalCharacters;
-  }
-
-  return uniformDistribution;
-}
-
 
 function calculateCharacterRates(text) {
   
